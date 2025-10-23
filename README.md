@@ -1,1 +1,5 @@
-Starting the project Educred Chain bruh?
+EduCred
+
+
+Come back one day
+
