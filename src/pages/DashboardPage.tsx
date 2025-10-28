@@ -108,7 +108,7 @@ const DashboardPage = () => {
               <div className="flex flex-wrap gap-3">
                 <div className="bg-white rounded-full px-3 py-1 text-sm font-medium text-primary-600 shadow-sm flex items-center">
                   <Sparkles className="h-3 w-3 mr-1" />
-                  Get summaries
+                  Get summary
                 </div>
                 <div className="bg-white rounded-full px-3 py-1 text-sm font-medium text-primary-600 shadow-sm flex items-center">
                   <Sparkles className="h-3 w-3 mr-1" />
