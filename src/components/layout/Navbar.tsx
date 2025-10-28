@@ -42,7 +42,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <Shield className="text-primary-600 w-8 h-8" />
-            <span className="text-2xl font-bold text-primary-600">CredBlock</span>
+            <span className="text-2xl font-bold text-primary-600">EduCred Chain</span>
           </Link>
 
           {/* Desktop Navigation */}

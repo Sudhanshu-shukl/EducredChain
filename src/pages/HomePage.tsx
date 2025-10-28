@@ -17,7 +17,7 @@ const HomePage = () => {
                 Verify Your Credentials with Blockchain & AI
               </h1>
               <p className="text-lg text-primary-100 max-w-lg">
-                CredBlock securely stores and verifies your learning credentials using blockchain technology and enhances them with AI-powered insights.
+                EduCred securely stores and verifies your learning credentials using blockchain technology and enhances them with AI-powered insights.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
                 {address ? (
@@ -99,7 +99,7 @@ const HomePage = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Benefits</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              CredBlock offers several advantages for learners, educators, and employers.
+              EduCred offers several advantages for learners, educators, and employers.
             </p>
           </div>
 
