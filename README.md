@@ -1,5 +1,2 @@
-EduCred
-
-
-Come back one day
-
+## EduCred Chain
+- Work in Progress
