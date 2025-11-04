@@ -47,8 +47,6 @@ export const parsePDF = async (file: File): Promise<string> => {
  * @returns Data URL of the preview image
  */
 export const generatePDFPreview = async (file: File): Promise<string> => {
-  // In a real application, we would render the first page of the PDF
-  // For demo purposes, return a placeholder image URL
   
   await new Promise(resolve => setTimeout(resolve, 1000));
   
