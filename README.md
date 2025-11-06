@@ -122,3 +122,5 @@ Commit 40 at 2025-11-05 12:59:53
 [2025-11-06 19:07:33] - refactor: improve variable names
 
 [2025-11-06 19:07:40] - docs: update README
+
+[2025-11-06 19:07:43] - feat: add example
