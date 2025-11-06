@@ -51,3 +51,5 @@
 [2025-11-06 19:30:29] - fix: typo
 
 [2025-11-06 19:30:32] - chore: formatting cleanup
+
+[2025-11-06 19:30:40] - refactor: restructure code
