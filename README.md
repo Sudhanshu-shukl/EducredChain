@@ -61,3 +61,5 @@
 [2025-11-06 19:30:57] - remove: unused code
 
 [2025-11-06 19:31:03] - perf: improve performance
+
+[2025-11-06 19:31:11] - docs: update README
