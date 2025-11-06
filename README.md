@@ -21,3 +21,5 @@
 [2025-11-06 19:28:55] - chore: update dependencies
 
 [2025-11-06 19:29:03] - tweak: logic fine-tune
+
+[2025-11-06 19:29:12] - perf: optimize function
