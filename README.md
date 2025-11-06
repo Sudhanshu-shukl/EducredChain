@@ -7,3 +7,5 @@
 [2025-11-06 19:28:17] - perf: improve performance
 
 [2025-11-06 19:28:25] - perf: optimize function
+
+[2025-11-06 19:28:29] - feat: add example
