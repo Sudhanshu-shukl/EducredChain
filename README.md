@@ -29,3 +29,5 @@
 [2025-11-06 19:29:25] - docs: update README
 
 [2025-11-06 19:29:29] - docs: update README
+
+[2025-11-06 19:29:33] - fix: small mistake
