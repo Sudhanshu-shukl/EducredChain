@@ -1,42 +1,53 @@
+import OpenAI from "openai";
+
+const client = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY!
+});
+
 /**
- * Get AI-generated summary of credential content
- * 
- * @param text Content text to summarize
- * @returns AI-generated summary
+ * Generate an AI-based summary of given credential content
  */
 export const generateSummary = async (text: string): Promise<string> => {
-  // In a real application, we would call SingularityNET's AI service
-  // For demo purposes, we'll simulate the response
-  
   try {
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Return a fake summary
-    return 'This credential demonstrates proficiency in blockchain technology and Web3 development. It covers key concepts in distributed systems, smart contracts, and decentralized applications. The holder has demonstrated the ability to design and implement blockchain solutions for various use cases.';
+    const response = await client.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "system", content: "Summarize the given credential text in a concise, professional tone." },
+        { role: "user", content: text }
+      ],
+      max_tokens: 150
+    });
+
+    return response.choices[0].message.content || "Summary unavailable.";
   } catch (error) {
-    console.error('Error generating summary:', error);
+    console.error("Summary generation failed:", error);
     throw error;
   }
 };
-
 /**
- * Get AI response to a question about the credential
- * 
- * @param question User's question
- * @param context Credential content for context
- * @returns AI response
+ * Answer user questions based on credential content
  */
 export const askQuestion = async (question: string, context: string): Promise<string> => {
-  // Simulate API delay
-  await new Promise(resolve => setTimeout(resolve, 1500));
-  
-  // For demo purposes, return predetermined responses
-  if (question.toLowerCase().includes('blockchain')) {
-    return 'Blockchain is a distributed ledger technology that underpins cryptocurrencies and allows for secure, transparent transactions without a central authority.';
-  } else if (question.toLowerCase().includes('nft')) {
-    return 'NFTs (Non-Fungible Tokens) are unique digital assets that represent ownership of a specific item or piece of content on the blockchain. They are being used for digital art, collectibles, and now for credential verification.';
-  } else {
-    return 'Based on the credential content, I can provide insights on blockchain technology, Web3 development, and decentralized applications. Please ask a more specific question about these topics.';
+  try {
+    const response = await client.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are an expert credential analyst. Answer questions strictly based on the provided credential content."
+        },
+        {
+          role: "user",
+          content: `Credential Content: ${context}\n\nQuestion: ${question}`
+        }
+      ],
+      max_tokens: 200
+    });
+
+    return response.choices[0].message.content || "No answer generated.";
+  } catch (error) {
+    console.error("AI question answering failed:", error);
+    throw error;
   }
 };
